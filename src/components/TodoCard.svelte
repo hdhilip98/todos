@@ -25,6 +25,8 @@
         <TodoPreview {todo} on:dblclick={() => (mode = "edit")} />
       {/if}
     </div>
-    <button type="button" class="btn-close" aria-label="Close" on:click={remove} />
+    {#if mode === "preview"}
+      <button type="button" class="btn-close" aria-label="Close" on:click={remove} />
+    {/if}
   </div>
 </div>
