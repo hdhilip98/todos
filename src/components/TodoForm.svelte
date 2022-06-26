@@ -1,8 +1,11 @@
 <script>
+  import { todos } from "../stores/todos";
+
   let title = "";
 
   const handleSubmit = () => {
-    console.log(title);
+    todos.addTodo(title);
+    title = "";
   };
 </script>
 
