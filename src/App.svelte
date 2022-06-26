@@ -6,7 +6,7 @@
 
 <div class="p-4 app">
   <h2 class="display-2 text-center">todos</h2>
-  <div class="d-flex flex-column gap-3">
+  <div class="mt-4 d-flex flex-column gap-4">
     <TodoForm />
     <TodoControls />
     <TodoList />
