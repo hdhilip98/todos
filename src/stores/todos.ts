@@ -38,6 +38,7 @@ const createTodoStore = (initial: Todo[]) => {
 
 const initial = JSON.parse(localStorage.getItem("todos")) ?? [];
 export const todos = createTodoStore(initial);
+todos.subscribe((values) => localStorage.setItem("todos", JSON.stringify(values)));
 
 export const filter = writable<Filter>("all");
 
