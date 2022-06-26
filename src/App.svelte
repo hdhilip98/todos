@@ -2,13 +2,17 @@
   import TodoControls from "./components/TodoControls.svelte";
   import TodoForm from "./components/TodoForm.svelte";
   import TodoList from "./components/TodoList.svelte";
+  import { todos } from "./store";
 </script>
 
 <div class="p-4 app">
   <h2 class="display-2 text-center">todos</h2>
   <div class="mt-4 d-flex flex-column gap-4">
     <TodoForm />
-    <TodoControls />
-    <TodoList />
+    {#if $todos.length > 0}
+      <TodoControls />
+      <TodoList />
+      <small class="d-block text-muted text-center">Double-click to edit a todo</small>
+    {/if}
   </div>
 </div>
