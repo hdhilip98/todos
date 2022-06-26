@@ -1,6 +1,10 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
+body {
+  min-height: 100vh;
+}
+
 .app {
   max-width: 550px;
   min-width: 230px;

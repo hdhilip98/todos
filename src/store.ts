@@ -23,6 +23,15 @@ const createTodoStore = (initial: Todo[]) => {
     );
   };
 
+  const updateTitle = (id: string, title: string) => {
+    update((todos) =>
+      todos.map((todo) => {
+        if (todo.id === id) todo.title = title;
+        return todo;
+      })
+    );
+  };
+
   const clearCompleted = () => {
     update((todos) => todos.filter((t) => !t.completed));
   };
@@ -32,6 +41,7 @@ const createTodoStore = (initial: Todo[]) => {
     addTodo,
     removeTodo,
     toggleTodo,
+    updateTitle,
     clearCompleted,
   };
 };
