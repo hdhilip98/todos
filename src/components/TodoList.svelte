@@ -5,15 +5,15 @@
 
 <div class="d-flex flex-column gap-2">
   {#if $filter === "completed"}
-    {#each $completedTodos as todo}
+    {#each $completedTodos as todo (todo.id)}
       <TodoCard {todo} />
     {/each}
   {:else if $filter === "active"}
-    {#each $activeTodos as todo}
+    {#each $activeTodos as todo (todo.id)}
       <TodoCard {todo} />
     {/each}
   {:else}
-    {#each $todos as todo}
+    {#each $todos as todo (todo.id)}
       <TodoCard {todo} />
     {/each}
   {/if}
