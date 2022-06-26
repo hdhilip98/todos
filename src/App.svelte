@@ -17,4 +17,4 @@
   </div>
 </div>
 
-<p class="footer m-0 text-center">Developed by Dhilip H</p>
+<small class="footer m-0 text-muted">Built with Svelte and Bootstrap</small>
