@@ -1,6 +1,12 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
+.app {
+  max-width: 550px;
+  min-width: 230px;
+  margin: 0 auto;
+}
+
 .completed {
   text-decoration: line-through;
 }
