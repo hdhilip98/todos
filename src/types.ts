@@ -3,3 +3,6 @@ export interface Todo {
   title: string;
   completed: boolean;
 }
+
+export type Mode = "preview" | "edit";
+export type Filter = "all" | "completed" | "active";

@@ -1,2 +1,28 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+.completed {
+  text-decoration: line-through;
+}
+
+.btn-clear:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.btn-filter {
+  cursor: pointer;
+}
+
+.card .card-body .btn-close {
+  font-size: 0.7rem;
+  display: none;
+}
+
+.card:hover .card-body .btn-close {
+  display: block;
+}
+
+.hidden {
+  visibility: hidden;
+}

@@ -1,13 +1,13 @@
-import { writable } from "svelte/store";
+import { writable, derived } from "svelte/store";
 import { v4 as uuid } from "uuid";
 
-import type { Todo } from "src/types";
+import type { Todo, Filter } from "src/types";
 
-const createTodoStore = (initial: Todo[] = []) => {
-  const { subscribe, set, update } = writable(initial);
+const createTodoStore = (initial: Todo[]) => {
+  const { subscribe, update } = writable(initial);
 
   const addTodo = (title: string) => {
-    update((todos) => [...todos, { id: uuid(), title, completed: false }]);
+    update((todos) => [{ id: uuid(), title, completed: false }, ...todos]);
   };
 
   const removeTodo = (id: string) => {
@@ -23,12 +23,24 @@ const createTodoStore = (initial: Todo[] = []) => {
     );
   };
 
+  const clearCompleted = () => {
+    update((todos) => todos.filter((t) => !t.completed));
+  };
+
   return {
     subscribe,
     addTodo,
     removeTodo,
     toggleTodo,
+    clearCompleted,
   };
 };
 
-export const todos = createTodoStore();
+const initial = JSON.parse(localStorage.getItem("todos")) ?? [];
+export const todos = createTodoStore(initial);
+
+export const filter = writable<Filter>("all");
+
+export const remainingCount = derived(todos, ($todos) => $todos.filter((t) => !t.completed).length);
+export const completedTodos = derived(todos, ($todos) => $todos.filter((t) => t.completed));
+export const activeTodos = derived(todos, ($todos) => $todos.filter((t) => !t.completed));
