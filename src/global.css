@@ -3,6 +3,7 @@
 
 body {
   min-height: 100vh;
+  position: relative;
 }
 
 .app {
@@ -35,4 +36,11 @@ body {
 
 .hidden {
   visibility: hidden;
+}
+
+.footer {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
 }

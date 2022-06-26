@@ -16,3 +16,5 @@
     {/if}
   </div>
 </div>
+
+<p class="footer m-0 text-center">Developed by Dhilip H</p>
