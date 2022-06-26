@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { Todo, Mode } from "../types";
   import TodoPreview from "./TodoPreview.svelte";
-  import { todos } from "../stores/todos";
+  import { todos } from "../store";
 
   export let todo: Todo;
   let mode: Mode = "preview";

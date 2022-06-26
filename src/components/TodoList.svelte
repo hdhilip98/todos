@@ -1,6 +1,6 @@
 <script lang="ts">
   import TodoCard from "./TodoCard.svelte";
-  import { filter, todos, activeTodos, completedTodos } from "../stores/todos";
+  import { filter, todos, activeTodos, completedTodos } from "../store";
 </script>
 
 <div class="d-flex flex-column gap-2">

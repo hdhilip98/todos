@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { todos } from "../stores/todos";
+  import { todos } from "../store";
 
   let title = "";
 

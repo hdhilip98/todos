@@ -1,6 +1,6 @@
 <script lang="ts">
   import Filter from "./Filter.svelte";
-  import { filter, remainingCount, completedTodos, todos } from "../stores/todos";
+  import { filter, remainingCount, completedTodos, todos } from "../store";
 
   let filters = [
     { text: "All", value: "all" },
