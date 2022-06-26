@@ -1,0 +1,14 @@
+<script>
+  let title = "";
+
+  const handleSubmit = () => {
+    console.log(title);
+  };
+</script>
+
+<form class="w-25 d-flex gap-2" on:submit|preventDefault={handleSubmit}>
+  <input bind:value={title} type="text" class="form-control" placeholder="What needs to be done?" />
+  <button type="submit" class="btn btn-primary">
+    <i class="bi bi-plus-lg" />
+  </button>
+</form>
